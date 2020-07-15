@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Food Searcher</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+  <script src="/script.js"></script>
+</head>
+
+<body>
+  <!--Navbar-->
+  {{> navbar}}
+
+  <!-- Begin page content -->
+  <header class="bg-light py-4 text-dark blue">
+    <div class="container text-center">
+      <h1>Welcome to Food Searcher</h1>
+      <p class="lead">A restaurant searcher website</p>
+    </div>
+  </header>
+
+  <div class="cover">
+    <div class="text-center centered">
+      <div class="container">
+        <h1 class="display-3" style="color:white">Food Searcher</h1>
+        <p class="lead" style="color:white; font-size:30px">Search for restaurants around you</p>
+        <a class="btn btn-outline-light btn-lg" href="/form">Get Started</a>
+      </div>
+    </div>
+  </div>
+
+  <html>
+
+  <head>
+    <title>Place Searches</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+
+      /* Optional: Makes the sample page fill the window. */
+      html,
+      body {
+        height: 70%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+    <script>
+      // This example requires the Places library. Include the libraries=places
+      // parameter when you first load the API. For example:
+      // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
+
+      var map;
+      var infowindow;
+
+      function initMap() {
+        var pyrmont = { lat: 5.339479, lng: 100.298138 };
+
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: pyrmont,
+          zoom: 15
+        });
+
+        infowindow = new google.maps.InfoWindow();
+        var service = new google.maps.places.PlacesService(map);
+        service.nearbySearch({
+          location: pyrmont,
+          radius: 2000,
+          type: ['restaurant']
+        }, callback);
+      }
+
+      function callback(results, status) {
+        if (status === google.maps.places.PlacesServiceStatus.OK) {
+          for (var i = 0; i < results.length; i++) {
+            createMarker(results[i]);
+          }
+        }
+      }
+
+      function createMarker(place) {
+        var placeLoc = place.geometry.location;
+        var marker = new google.maps.Marker({
+          map: map,
+          position: place.geometry.location
+        });
+
+        google.maps.event.addListener(marker, 'click', function () {
+          infowindow.setContent(place.name);
+          infowindow.open(map, this);
+        });
+      }
+    </script>
+  </head>
+  <center>
+  <button type="button" onclick="bar_button()" class="btn btn-danger"> Bar </button>
+  <button type="button" onclick="bakery_button()" class="btn btn-danger"> Bakery </button>
+  <button type="button" onclick="cafe_button()" class="btn btn-danger"> Cafe </button>
+  <button type="button" onclick="restaurant_button()" class="btn btn-danger"> Restaurant </button>
+  </center>
+  <body>
+    <div id="map"></div>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCNqHvtPfkk3z7e0anOvfLf6-5qmT9b2KM&libraries=places&callback=initMap"
+      async defer>
+    </script>
+  </body>
+  </html>
+  
+</body>
+</html>

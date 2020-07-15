@@ -1,0 +1,44 @@
+body,
+html {
+  height: 100%;
+  margin: 0;
+}
+
+.cover {
+  /* The image used */
+  background-image: url('https://images.pexels.com/photos/1488467/pexels-photo-1488467.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260ps://s3-prod.adage.com/s3fs-public/styles/width_1024/public/227393674_3x2.jpg');
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  background-color: #2c2b2bfb;
+  background-blend-mode: overlay;
+
+  opacity: 0.85;
+}
+
+.centered {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.btn3 {
+  background-color: #2288d6;
+  height: 40px;
+  width: 120px;
+  color: #ffffff;
+}
+
+.btn3 {
+  background-color: #2288d6;
+  height: 40px;
+  width: 120px;
+  color: #ffffff;
+}

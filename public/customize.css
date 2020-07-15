@@ -1,0 +1,80 @@
+body,
+html {
+  height: 100%;
+  margin: 0;
+}
+
+.half-cover1 {
+  /* The image used */
+  background-image: url('https://inspgr.id/app/uploads/2019/12/photography-pavel-sablya-01.jpg');
+
+  /* Full height */
+  height: 50%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  background-color: #474545;
+  background-blend-mode: overlay;
+  opacity: 0.85;
+}
+
+.half-cover2 {
+  /* The image used */
+  background-image: url('https://format-com-cld-res.cloudinary.com/image/private/s--po0rmUn1--/c_crop,h_900,w_720,x_0,y_72/c_fill,g_center,h_475,w_380/fl_keep_iptc.progressive,q_95/v1/b31d1e3353a41ea705f31605e0641581/Tortellini_FoodPhotographer_LenkaSelinger-2.jpg');
+
+  /* Full height */
+  height: 50%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  background-color: #474545;
+  background-blend-mode: overlay;
+  opacity: 0.85;
+}
+
+.half-cover3 {
+  /* The image used */
+  background-image: url('https://images.squarespace-cdn.com/content/v1/50783a3de4b0721a85bbddcf/1574731595020-AGDDQZOQM68C0OYEIEAW/ke17ZwdGBToddI8pDm48kHH9S2ID7_bpupQnTdrPcoF7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0nQwvinDXPV4EYh2MRzm-RRB5rUELEv7EY2n0AZOrEupxpSyqbqKSgmzcCPWV5WMiQ/FC+Horizontal+9.jpg');
+
+  /* Full height */
+  height: 50%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  background-color: #474545;
+  background-blend-mode: overlay;
+  opacity: 0.85;
+}
+
+.half-cover4 {
+  /* The image used */
+  background-image: url('https://s3-prod.adage.com/s3fs-public/styles/width_1024/public/227393674_3x2.jpg');
+
+  /* Full height */
+  height: 50%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  background-color: #474545;
+  background-blend-mode: overlay;
+  opacity: 0.85;
+}
+
+.centered {
+  position: absolute;
+  top: 28%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
